@@ -57,7 +57,8 @@ class AlarmClock {
     start (){ 
       let array = this.alarmCollection;
       if (this.timerId === null){
-        this.timerId = setInterval (() => {array.forEach (obj => this.checkClock(obj))}, 1000);
+        //this.timerId = setInterval (() => {array.forEach (obj => this.checkClock(obj))}, 1000);
+        this.timerId = setInterval (() => {this.alarmCollection.forEach (obj => this.checkClock(obj))}, 1000);
       } 
     }
   
